@@ -1,0 +1,340 @@
+{
+	"info": {
+		"_postman_id": "b74ac423-a0b3-4942-ba08-6e0a4a3e796e",
+		"name": "New Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19996735"
+	},
+	"item": [
+		{
+			"name": "get user info with token",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9001/users/findwithtoken?token=eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0IiwiaWF0IjoxNjg1MjgwNzU0LCJleHAiOjE2ODUyODA4MTR9.YchNLMv8EQTHgqKlWoLjNdrYzNhDieBnjDFhxx1ysliXnA5gCt8Bb-BY5It6993qwmnbTUncasu1zBC9FD-EtA",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9001",
+					"path": [
+						"users",
+						"findwithtoken"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0IiwiaWF0IjoxNjg1MjgwNzU0LCJleHAiOjE2ODUyODA4MTR9.YchNLMv8EQTHgqKlWoLjNdrYzNhDieBnjDFhxx1ysliXnA5gCt8Bb-BY5It6993qwmnbTUncasu1zBC9FD-EtA"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "register user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"a@b.c\",\n    \"username\": \"test\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9001/users/register?password=1233",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9001",
+					"path": [
+						"users",
+						"register"
+					],
+					"query": [
+						{
+							"key": "password",
+							"value": "1233"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get menu",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9002/orders/getmenu",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9002",
+					"path": [
+						"orders",
+						"getmenu"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "set role",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9001/users/setrole?token=eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0IiwiaWF0IjoxNjg1Mjg1NDQxLCJleHAiOjE2ODUyODYwNDF9.zYMOOdN7OwDQ7A_TtYMQEryWui_EkMG-WDdpgPItZuf-6h2_CLmdQW2U1YKmPswmma63dv0Qu5oNT4oP2TwzKw&role=manager",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9001",
+					"path": [
+						"users",
+						"setrole"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0IiwiaWF0IjoxNjg1Mjg1NDQxLCJleHAiOjE2ODUyODYwNDF9.zYMOOdN7OwDQ7A_TtYMQEryWui_EkMG-WDdpgPItZuf-6h2_CLmdQW2U1YKmPswmma63dv0Qu5oNT4oP2TwzKw"
+						},
+						{
+							"key": "role",
+							"value": "manager"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create dish",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"1\",\n    \"description\": \"3\",\n    \"price\": \"3.2\",\n    \"quantity\": \"10\",\n    \"isAvailable\": \"true\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9002/orders/createdish?token=eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0IiwiaWF0IjoxNjg1Mjg1NDQxLCJleHAiOjE2ODUyODYwNDF9.zYMOOdN7OwDQ7A_TtYMQEryWui_EkMG-WDdpgPItZuf-6h2_CLmdQW2U1YKmPswmma63dv0Qu5oNT4oP2TwzKw",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9002",
+					"path": [
+						"orders",
+						"createdish"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0IiwiaWF0IjoxNjg1Mjg1NDQxLCJleHAiOjE2ODUyODYwNDF9.zYMOOdN7OwDQ7A_TtYMQEryWui_EkMG-WDdpgPItZuf-6h2_CLmdQW2U1YKmPswmma63dv0Qu5oNT4oP2TwzKw"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "authorize",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9001/users/authorize?email=a@b.c&password=1233",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9001",
+					"path": [
+						"users",
+						"authorize"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "a@b.c"
+						},
+						{
+							"key": "password",
+							"value": "1233"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getorderinfo",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9002/orders/getorderinfo?id=1&token=eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0IiwiaWF0IjoxNjg1Mjk4NTM1LCJleHAiOjE2ODUyOTkxMzV9.HZbCCCVXHFmk2TjM44gMRMgWXNddouj-hq9ThpCNWl9QpXPcqHTfjnHPTXGnow8w_b02P3pOZBUBOl3iguHDEw",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9002",
+					"path": [
+						"orders",
+						"getorderinfo"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1"
+						},
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0IiwiaWF0IjoxNjg1Mjk4NTM1LCJleHAiOjE2ODUyOTkxMzV9.HZbCCCVXHFmk2TjM44gMRMgWXNddouj-hq9ThpCNWl9QpXPcqHTfjnHPTXGnow8w_b02P3pOZBUBOl3iguHDEw"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createorder",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"token\": \"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0IiwiaWF0IjoxNjg1Mjk4NTM1LCJleHAiOjE2ODUyOTkxMzV9.HZbCCCVXHFmk2TjM44gMRMgWXNddouj-hq9ThpCNWl9QpXPcqHTfjnHPTXGnow8w_b02P3pOZBUBOl3iguHDEw\",\n    \"dishes\": [\n        {\n            \"id\": 1,\n            \"price\": 3.2,\n            \"quantity\": 5\n\n        }\n    ],\n    \"specailRequests\": \"123\",\n    \"status\": \"cooking\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9002/orders/createorder",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9002",
+					"path": [
+						"orders",
+						"createorder"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "read dish",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9002/orders/readdish?id=1&token=eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0IiwiaWF0IjoxNjg1Mjk4NTM1LCJleHAiOjE2ODUyOTkxMzV9.HZbCCCVXHFmk2TjM44gMRMgWXNddouj-hq9ThpCNWl9QpXPcqHTfjnHPTXGnow8w_b02P3pOZBUBOl3iguHDEw",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9002",
+					"path": [
+						"orders",
+						"readdish"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1"
+						},
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0IiwiaWF0IjoxNjg1Mjk4NTM1LCJleHAiOjE2ODUyOTkxMzV9.HZbCCCVXHFmk2TjM44gMRMgWXNddouj-hq9ThpCNWl9QpXPcqHTfjnHPTXGnow8w_b02P3pOZBUBOl3iguHDEw"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update dish",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": 1,\n    \"name\": \"1\",\n    \"description\": \"3\",\n    \"price\": 3.2,\n    \"quantity\": 10,\n    \"isAvailable\": true\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9002/orders/putdish?token=eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0IiwiaWF0IjoxNjg1Mjk5Mjc3LCJleHAiOjE2ODUyOTk4Nzd9.0_lkGLNpGdGkM4t82JnGeOu-VeNm3Ksbrnv5HtQEAox7mbzkbD6ZRGZozj1GKCVB04j9v-fjdxI33vrQGxHrcA",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9002",
+					"path": [
+						"orders",
+						"putdish"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0IiwiaWF0IjoxNjg1Mjk5Mjc3LCJleHAiOjE2ODUyOTk4Nzd9.0_lkGLNpGdGkM4t82JnGeOu-VeNm3Ksbrnv5HtQEAox7mbzkbD6ZRGZozj1GKCVB04j9v-fjdxI33vrQGxHrcA"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete dish",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9002/orders/deletedish?id=1&token=eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0IiwiaWF0IjoxNjg1Mjk5Mjc3LCJleHAiOjE2ODUyOTk4Nzd9.0_lkGLNpGdGkM4t82JnGeOu-VeNm3Ksbrnv5HtQEAox7mbzkbD6ZRGZozj1GKCVB04j9v-fjdxI33vrQGxHrcA",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9002",
+					"path": [
+						"orders",
+						"deletedish"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1"
+						},
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0IiwiaWF0IjoxNjg1Mjk5Mjc3LCJleHAiOjE2ODUyOTk4Nzd9.0_lkGLNpGdGkM4t82JnGeOu-VeNm3Ksbrnv5HtQEAox7mbzkbD6ZRGZozj1GKCVB04j9v-fjdxI33vrQGxHrcA"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
